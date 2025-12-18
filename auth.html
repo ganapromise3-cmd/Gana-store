@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gana Shop | Login / Signup</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+
+    <main class="container auth-container">
+        <h2>Welcome to the Gana Store</h2>
+
+        <div id="login-section" class="auth-box">
+            <h3>Login</h3>
+            <form id="login-form">
+                <input type="email" id="login-email" placeholder="Email" required>
+                <input type="password" id="login-password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p class="toggle-text">
+                Don't have an account? <span id="show-signup" class="toggle-link">Sign up here.</span>
+            </p>
+        </div>
+
+        <div id="signup-section" class="auth-box hidden">
+            <h3>Create Account</h3>
+            <form id="signup-form">
+                <input type="text" id="signup-username" placeholder="Username" required>
+                <input type="email" id="signup-email" placeholder="Email" required>
+                <input type="password" id="signup-password" placeholder="Password (min 6 chars)" required>
+                <button type="submit">Sign Up</button>
+            </form>
+            <p class="toggle-text">
+                Already have an account? <span id="show-login" class="toggle-link">Login here.</span>
+            </p>
+        </div>
+    </main>
+
+    <script src="auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+/* product.css */
+
+/* Layout for Image and Details */
+.detail-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* Image on the left, details on the right */
+    gap: 40px;
+    background: yellow;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 900px) {
+    .detail-layout {
+        grid-template-columns: 1fr; /* Stack on smaller screens */
+    }
+}
+
+.detail-image-box {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: #fcfcfc;
+}
+
+.detail-image {
+    max-width: 100%;
+    max-height: 450px; /* Limit image height */
+    object-fit: contain;
+}
+
+.detail-info h2 {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.detail-price {
+    font-size: 2em;
+    color: green;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 15px;
+}
+
+.detail-description {
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+/* Button styling - reuse the primary button style */
+.detail-add-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.2s;
+    width: 100%;
+    max-width: 300px;
+}
+
+.detail-add-btn:hover {
+    background-color: #0056b3;
+}
