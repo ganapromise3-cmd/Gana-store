@@ -1,4 +1,4 @@
-// --- ADD LOGIN GUARD AT THE VERY TOP OF product.js ---
+
 function checkAuthAndGetUserId() {
     const isLoggedIn = sessionStorage.getItem('isLoggedIn');
     const currentUserId = sessionStorage.getItem('currentUserId');
@@ -12,7 +12,7 @@ function checkAuthAndGetUserId() {
     return currentUserId;
 }
 
-const CURRENT_USER_ID = checkAuthAndGetUserId(); 
+const CURRENT_USER_ID1 = checkAuthAndGetUserId(); 
 
 // --- REST OF YOUR ORIGINAL product.js CODE FOLLOWS ---
 

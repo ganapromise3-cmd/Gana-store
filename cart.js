@@ -12,7 +12,7 @@ function checkAuthAndGetUserId() {
     return currentUserId;
 }
 
-const CURRENT_USER_ID = checkAuthAndGetUserId(); 
+const CURRENT_USER_ID1 = checkAuthAndGetUserId(); 
 
 // --- REST OF YOUR ORIGINAL cart.js CODE FOLLOWS ---
 
@@ -22,10 +22,10 @@ const totalElement = document.getElementById('total-amount');
 const CART_API_BASE = 'https://fakestoreapi.com/products/';
 
 // --- UPDATE getCart AND saveCart FUNCTIONS ---
-function getCart() {
-    if (!CURRENT_USER_ID) return [];
-    return JSON.parse(localStorage.getItem`(cart_${CURRENT_USER_ID})`) || [];
-}
+// function getCart() {
+//     if (!CURRENT_USER_ID) return [];
+//     return JSON.parse(localStorage.getItem(`cart_${CURRENT_USER_ID})`) || [];
+// }
 
 function saveCart(cart) {
     if (!CURRENT_USER_ID) return;
@@ -187,7 +187,5 @@ document.getElementById('checkout-btn').addEventListener('click', () => {
     alert('Checkout functionality is not yet implemented in this frontend-only demo!');
     // In a real app, this would send cart data to the backend.
 });
-
-
 // --- INITIALIZATION ---
 document.addEventListener('DOMContentLoaded', loadCart);
